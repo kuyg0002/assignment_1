@@ -30,3 +30,15 @@ spec:
             secretKeyRef:
               name: todo-app-secrets
               key: googleClientSecret
+      - name: syslog-ng
+        image: balabit/syslog-ng:latest
+        ports:
+        - containerPort: 514
+        volumeMounts:
+        - name: syslog-ng-config
+          mountPath: /etc/syslog-ng/syslog-ng.conf
+          subPath: syslog-ng.conf
+      volumes:
+      - name: syslog-ng-config
+        configMap:
+          name: syslog-ng-config
