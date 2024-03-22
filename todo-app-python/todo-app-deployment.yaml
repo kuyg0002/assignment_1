@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-app-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: todo-app
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      containers:
+      - name: todo-app
+        image: akin35/todo-app:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: APPLICATION_URL
+          value: "http://<external-ip-or-domain>"  # Replace with actual value after deployment
+        - name: GOOGLE_CLIENT_ID
+          valueFrom:
+            secretKeyRef:
+              name: todo-app-secrets
+              key: googleClientId
+        - name: GOOGLE_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: todo-app-secrets
+              key: googleClientSecret
