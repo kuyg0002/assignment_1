@@ -18,7 +18,7 @@
 *Assignment1 folder structure from VScode
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/1x.png){width="6.5in" height="3.89375in"}
+generated](./Screenshots/1x.png)
 
 ### Steps:
 
@@ -27,13 +27,13 @@ generated](./Screenshots/1x.png){width="6.5in" height="3.89375in"}
 *app.py python application is created and tested, it is working:
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/1a1.png){width="6.5in" height="3.89375in"}
+generated](./Screenshots/1a1.png)
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/1a2.png){width="6.5in" height="3.89375in"}
+generated](./Screenshots/1a2.png)
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/1a3.png){width="6.5in" height="3.89375in"}
+generated](./Screenshots/1a3.png)
 
 * Containerize the Application: Created a Dockerfile, and build a Docker image.
 
