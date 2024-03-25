@@ -53,3 +53,29 @@ def serve_index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
+import logging
+from logging.handlers import SysLogHandler
+
+# Initialize Flask app as before
+app = Flask(__name__, static_folder='public')
+
+# Set up basic logging configuration
+logging.basicConfig(level=logging.INFO)
+
+# Create a SysLogHandler instance
+# We will later send logs to the syslog service by specifying its address
+syslog_handler = SysLogHandler(address=('syslog-ng-service', 514))  # 'syslog-ng-service' is the Kubernetes service name for syslog-ng
+
+# Add formatter to syslog handler
+formatter = logging.Formatter('[%(asctime)s] %(levelname)s in %(module)s: %(message)s')
+syslog_handler.setFormatter(formatter)
+
+# Add the syslog handler to the app's logger
+app.logger.addHandler(syslog_handler)
+
+# Example usage in a Flask route
+@app.route('/')
+def hello_world():
+    app.logger.info('Hello, World! endpoint was accessed')
+    return 'Hello, World! <a href="/login">Login</a>'
