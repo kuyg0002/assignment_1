@@ -22,7 +22,7 @@ generated](./Screenshots/1x.png)
 
 ### Steps:
 
-* Choose an Application: For this assignment we chose To-Do Python app to use:
+* Choose an Application: For this assignment, we chose a To-Do Python app to use:
 
 *app.py python application is created and tested, it is working:
 
@@ -73,14 +73,14 @@ generated](./Screenshots/1c4.png)
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/1c32.png)
 
-* Configure SSO with Gmail: Implement OAuth 2.0 in application to use Gmail for authentication.  Registered the application in Google Cloud Platform to get the necessary credentials (Client ID and Client Secret) and configure the redirect URIs.
+* Configure SSO with Gmail: Implement OAuth 2.0 in the application to use Gmail for authentication.  Registered the application in Google Cloud Platform to get the necessary credentials (Client ID and Client Secret) and configure the redirect URIs.
 
-* Creating api registration (credential) from google cloud platform:
+* Creating API registration (credential) from the Google Cloud platform:
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/1d1.png)
 
-* Use google credentials on the Python app:
+* Use Google credentials on the Python app:
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/1d2.png)
@@ -91,7 +91,7 @@ generated](./Screenshots/1d2.png)
 
 ### Steps:
 
-* Syslog Server Setup: Choose a syslog server solution (e.g., Syslog-NG, rsyslog) and deploy it either within the Kubernetes cluster as a pod or externally. 
+* Syslog Server Setup: Choose a Syslog server solution (e.g., Syslog-NG, rsyslog) and deploy it either within the Kubernetes cluster as a pod or externally. 
 
 * Created syslog-ng.yaml file and deployed, 
 
@@ -107,7 +107,7 @@ generated](./Screenshots/2a3.png)
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/2a4.png)
 
-* Configure Log Forwarding: Modify application's logging configuration to forward logs to the syslog server. 
+* Configure Log Forwarding: Modify the application's logging configuration to forward logs to the syslog server. 
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/2b1.png)
@@ -129,7 +129,7 @@ generated](./Screenshots/3a0.png)
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/3a.png)
 
-* Configure Syslog Server: Set up the syslog server to forward logs to Azure Log Analytics. 
+* Configure Syslog Server: Set up the Syslog server to forward logs to Azure Log Analytics. 
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/3b.png)
@@ -169,13 +169,13 @@ generated](./Screenshots/4a2.png)
 generated](./Screenshots/4a3.png)
 
 ![A screenshot of a computer Description automatically
+generated](./Screenshots/4a3.png)
+
+![A screenshot of a computer Description automatically
 generated](./Screenshots/4a4.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/4a5.png)
-
-![A screenshot of a computer Description automatically
-generated](./Screenshots/4b.png)
 
 
 * Create Dashboards: Design and create Grafana dashboards to visualize various telemetry data points from the application logs.
