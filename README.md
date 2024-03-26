@@ -6,7 +6,7 @@
 * Ahmad Sultan
 * Akin Kuyga
 * Chowdhurysal Ferdowsy
-* Cameron Barbar
+* Cameron Barber
 * Jaehoandrew Han
 
 ## Steps are taken:
@@ -121,15 +121,18 @@ generated](./Screenshots/2b2.png)
 
 ### Steps:
 
-* Create Azure Log Analytics Workspace: create a new workspace in Azure Log Analytics.
+* Create Azure Log Analytics Workspace: create a new workspace in Azure Log Analytics and Azure Monitor and then connect them our AKS cluster
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/3a.png)
+generated](./Screenshots/3a0.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/3a.png)
 
 * Configure Syslog Server: Set up the syslog server to forward logs to Azure Log Analytics. 
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/3b.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/3c.png)
@@ -138,6 +141,9 @@ generated](./Screenshots/3c.png)
 generated](./Screenshots/3d.png)
 
 * Ensure Proper Log Formatting: The logs sent to Azure Log Analytics are correctly formatted and include necessary information for effective monitoring.
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/3e.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/3e.png)
@@ -151,18 +157,50 @@ generated](./Screenshots/3e.png)
 * Set Up Grafana: Deploy Grafana and configure it to connect to your Azure Log Analytics workspace as a data source.
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/4a.png)
+generated](./Screenshots/4a0.png
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4a1.ng)
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4a2.png)
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4a3.png)
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4a4.png)
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4a5.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/4b.png)
 
+
 * Create Dashboards: Design and create Grafana dashboards to visualize various telemetry data points from the application logs.
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/4b1.png)
 
 ![A screenshot of a computer Description automatically
 generated](./Screenshots/4c.png)
 
 ![A screenshot of a computer Description automatically
-generated](./Screenshots/4d.png)
+generated](./Screenshots/FINAL.png)
+
+![A screenshot of a computer Description automatically
+generated](./Screenshots/FINAL2.png)
+
+
+## Short Report:
+
+We worked on setting up a to-do python app to run on Kubernetes, which is like a system that can manage lots of apps at once. We chose an app that can let people sign in using their Gmail accounts. To get this to work, we had to pack the app in a way that Kubernetes can use it, which is called containerization. Then, we wrote some instructions (in a YAML file) to tell Kubernetes how to run our app. 
+After that, we set up a special server to collect all the messages (syslog) and errors from our app, so we can see if it's working right. We also connected this server to a tool called Azure Log Analytics, which keeps these messages safe and lets us look at them later. 
+Then, we used Grafana, which is like a drawing tool for data, to make pictures and charts of what's happening in our app. This helps us understand how our app is doing. In the end, we wrote down all the steps we took, so we can remember how to do this again or show others how to do it. This project taught us how to get our app ready for Kubernetes, how to keep track of what it's doing, and how to make Grafana connection with Azure Monitor agent to understand our app better.
+
+
+
 
 
 # 				Thank You!!!
